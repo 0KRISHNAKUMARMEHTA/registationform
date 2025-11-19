@@ -1,246 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="Krishna Tech offers tech tutorials, tips, and resources for web developers and tech enthusiasts.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Krishna Tech</title>
   <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: 'Segoe UI', sans-serif;
-    }
-
-    body {
-      background-color: #e4141468;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      padding: 20px;
-    }
-
-    form {
-      background-color: #19aedf;
-      padding: 30px 40px;
-      border-radius: 16px;
-      box-shadow: 0 8px 30px rgba(2, 2, 2, 0.1);
-      width: 460px;
-      margin: 0 auto;
-      transition: transform 0.3s ease;
-    }
-
-    form:hover {
-      transform: translateY(-5px);
-    }
-
-    h1 {
-      text-align: center;
-      color: #333;
-      margin-bottom: 20px;
-      text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
-    }
-
-    .progress-container {
-      width: 100%;
-      background-color: #ddd;
-      border-radius: 10px;
-      margin-bottom: 20px;
-    }
-
-    .progress-bar {
-      height: 10px;
-      background-color: #11f01c;
-      border-radius: 10px;
-      width: 0%;
-      transition: width 0.3s ease;
-    }
-
-    label {
-      margin: 12px 0 5px;
-      font-weight: bold;
-      color: #0d0d0d;
-      display: block;
-    }
-
-    
-    .input-container {
-      position: relative;
-      margin-bottom: 15px;
-    }
-
-    input[type="text"],
-    input[type="email"],
-    input[type="password"],
-    input[type="number"],
-    input[type="file"],
-    select,
-    textarea {
-      width: 100%;
-      padding: 12px;
-      border: 2px solid #ccc;
-      border-radius: 8px;
-      transition: all 0.3s ease;
-      background-color: #fff;
-    }
-
-    input:focus,
-    textarea:focus,
-    select:focus {
-      border-color: #4a90e2;
-      outline: none;
-      box-shadow: 0 0 5px rgba(74, 144, 226, 0.5);
-    }
-
-    .char-counter {
-      position: absolute;
-      right: 10px;
-      bottom: -20px;
-      font-size: 12px;
-      color: #666;
-    }
-
-    .validation-message {
-      color: #dc3545;
-      font-size: 12px;
-      margin-top: 5px;
-      display: none;
-    }
-
-    input:invalid + .validation-message {
-      display: block;
-    }
-
-    .radio-group, .checkbox-group {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 15px;
-      margin: 10px 0;
-    }
-
-    input[type="radio"],
-    input[type="checkbox"] {
-      margin-right: 6px;
-      cursor: pointer;
-    }
-
-    .form-buttons {
-      display: flex;
-      justify-content: space-between;
-      margin-top: 20px;
-      gap: 10px;
-    }
-
-    button {
-      padding: 12px 24px;
-      border: none;
-      border-radius: 8px;
-      font-weight: bold;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      flex: 1;
-    }
-
-    button[type="submit"] {
-      background-color: #28a745;
-      color: #fff;
-    }
-
-    button[type="submit"]:hover {
-      background-color: #218838;
-      transform: scale(1.05);
-    }
-
-    button[type="reset"] {
-      background-color: #dc3545;
-      color: #fff;
-    }
-
-    button[type="reset"]:hover {
-      background-color: #c82333;
-      transform: scale(1.05);
-    }
-
-    .success-message {
-      display: none;
-      text-align: center;
-      color: #28a745;
-      font-weight: bold;
-      margin-top: 20px;
-      animation: fadeIn 0.5s ease;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
+    /* (Same CSS as you had; omitted here for brevity) */
+    /* You can paste your previous CSS block here */
+    * { box-sizing:border-box; margin:0; padding:0; font-family:'Segoe UI',sans-serif; }
+    body { background-color: #e4141468; display:flex; flex-direction:column; justify-content:center; align-items:center; min-height:100vh; padding:20px; }
+    form { background:#19aedf; padding:30px 40px; border-radius:16px; box-shadow:0 8px 30px rgba(2,2,2,0.1); width:460px; margin:0 auto; transition:transform .3s; }
+    form:hover { transform: translateY(-5px); }
+    h1{ text-align:center; color:#333; margin-bottom:20px; text-shadow:2px 2px 4px rgba(0,0,0,0.1); }
+    .progress-container { width:100%; background:#ddd; border-radius:10px; margin-bottom:20px; }
+    .progress-bar { height:10px; background:#11f01c; border-radius:10px; width:0%; transition:width .3s; }
+    label{ margin:12px 0 5px; font-weight:bold; color:#0d0d0d; display:block; }
+    .input-container{ position:relative; margin-bottom:15px; }
+    input, select, textarea { width:100%; padding:12px; border:2px solid #ccc; border-radius:8px; background:#fff; transition:all .3s; }
+    input:focus, textarea:focus, select:focus { border-color:#4a90e2; outline:none; box-shadow:0 0 5px rgba(74,144,226,0.5); }
+    .char-counter{ position:absolute; right:10px; bottom:-20px; font-size:12px; color:#666; }
+    .validation-message{ color:#dc3545; font-size:12px; margin-top:5px; display:none; }
+    .radio-group, .checkbox-group{ display:flex; gap:15px; margin:10px 0; }
+    .form-buttons{ display:flex; gap:10px; margin-top:20px; }
+    button{ padding:12px 24px; border:none; border-radius:8px; font-weight:bold; cursor:pointer; flex:1; }
+    button[type="submit"]{ background:#28a745; color:#fff; } button[type="reset"]{ background:#dc3545; color:#fff; }
+    .success-message{ display:none; text-align:center; color:#28a745; font-weight:bold; margin-top:20px; }
   </style>
 </head>
-
 <body>
-  <h1><strong>KRIBADCHA REGISTATION FORM</strong></h1>
-  <form id="registrationForm" action="" enctype="multipart/form-data" method="post">
-    <div class="progress-container">
-      <div class="progress-bar" id="progressBar"></div>
-    </div>
+  <h1><strong>REGISTRATION FORM</strong></h1>
+
+  <!-- IMPORTANT: replace the action URL with your InfinityFree URL -->
+  <form id="registrationForm" action="https://YOUR_INFINITY_DOMAIN/submit.php" enctype="multipart/form-data" method="post">
+    <div class="progress-container"><div class="progress-bar" id="progressBar"></div></div>
 
     <div class="input-container">
       <label for="name">Name:</label>
-      <input type="text" id="name" name="name" minlength="3" maxlength="20" required placeholder="Enter Your Name...">
-      <div class="validation-message">Name must be between 3-20 characters</div>
+      <input type="text" id="name" name="name" minlength="3" maxlength="100" required placeholder="Enter Your Name...">
     </div>
 
     <div class="input-container">
-      <label for="Email">Email:</label>
-      <input type="email" id="Email" name="email" required placeholder="Enter Your Email...">
-      <div class="validation-message">Please enter a valid email address</div>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required placeholder="Enter Your Email...">
     </div>
 
     <div class="input-container">
-      <label for="Password">Email Password:</label>
-      <input type="password" id="Password" name="password" required placeholder="Enter Your Email Password...">
-      <div class="validation-message">Password is required</div>
+      <label for="password">Password (for this site):</label>
+      <input type="password" id="password" name="password" required placeholder="Choose a password...">
     </div>
 
     <div class="input-container">
-      <label for="mobile number">Phone number:</label>
-      <input type="number" id="mobile number" name="number" required placeholder="Enter Your Phone number...">
-      <div class="validation-message">Please enter a valid phone number</div>
+      <label for="mobile_number">Phone number:</label>
+      <input type="tel" id="mobile_number" name="mobile_number" pattern="[0-9]{10}" required placeholder="Enter 10-digit Phone number...">
     </div>
 
     <div class="input-container">
       <label for="age">Enter Your Age</label>
       <input type="number" id="age" name="age" min="18" max="65" required placeholder="Enter your Age...">
-      <div class="validation-message">Age must be between 18-65</div>
     </div>
 
     <label>Gender:</label>
     <div class="radio-group">
-      <label>
-        <input type="radio" name="gender" value="male"> Male
-      </label>
-      <label>
-        <input type="radio" name="gender" value="female"> Female
-      </label>
+      <label><input type="radio" name="gender" value="male" required> Male</label>
+      <label><input type="radio" name="gender" value="female"> Female</label>
     </div>
 
     <label>Hobbies:</label>
     <div class="checkbox-group">
-      <label>
-        <input type="checkbox" name="hobbies" value="HTML"> HTML
-      </label>
-      <label>
-        <input type="checkbox" name="hobbies" value="CSS"> CSS
-      </label>
-      <label>
-        <input type="checkbox" name="hobbies" value="JavaScript"> JavaScript
-      </label>
-      <label>
-        <input type="checkbox" name="hobbies" value="PYTHON"> PYTHON
-      </label>
+      <label><input type="checkbox" name="hobbies[]" value="HTML"> HTML</label>
+      <label><input type="checkbox" name="hobbies[]" value="CSS"> CSS</label>
+      <label><input type="checkbox" name="hobbies[]" value="JavaScript"> JavaScript</label>
+      <label><input type="checkbox" name="hobbies[]" value="PYTHON"> PYTHON</label>
     </div>
 
     <div class="input-container">
@@ -249,35 +79,33 @@
         <option value="Delhi">Delhi</option>
         <option value="Garhwa" selected>Garhwa</option>
         <option value="Ranchi">Ranchi</option>
-        <option value="mumbai">Mumbai</option>
+        <option value="Mumbai">Mumbai</option>
       </select>
     </div>
 
     <div class="input-container">
-      <label for="Pin Code">Pin Code</label>
-      <input type="number" id="Pin Code" name="Pin Code" pattern="[0-9]{6}" required placeholder="Enter Your Pin Code">
-      <div class="validation-message">Please enter a valid 6-digit pin code</div>
+      <label for="pincode">Pin Code</label>
+      <input type="text" id="pincode" name="pincode" pattern="[0-9]{6}" required placeholder="Enter Your 6-digit Pin Code">
     </div>
 
     <div class="input-container">
       <label for="myfile">MyFile</label>
       <input type="file" id="myfile" name="myfile" accept=".txt,.pdf,.jpg,.png,.docx" required>
-      <div class="validation-message">Please select a file</div>
     </div>
 
     <div class="input-container">
       <label for="address">Address:</label>
       <input type="text" id="address" name="address" required placeholder="Enter Your Address...">
+    </div>
 
     <div class="input-container">
-        <label for="date">Date:</label>
-        <input style="height: 50px; width: 378px; padding: 10px; border-radius: 10px;"  type="date" id="date" name="date" required>
-        <div class="validation-message">Please inter date of today</div>
+      <label for="date">Date:</label>
+      <input style="height:50px; width:100%; padding:10px; border-radius:10px;" type="date" id="date" name="date" required>
     </div>
 
     <div class="input-container">
       <label for="bio">About You:</label>
-      <textarea id="bio" name="bio" rows="4" cols="50" required placeholder="Tell us about yourself..."></textarea>
+      <textarea id="bio" name="bio" rows="4" cols="50" maxlength="500" required placeholder="Tell us about yourself..."></textarea>
       <div class="char-counter"><span id="charCount">0</span>/500</div>
     </div>
 
@@ -287,61 +115,44 @@
     </div>
   </form>
 
-  <div class="success-message" id="successMessage">
-    Form submitted successfully! Thank you for registering.
-  </div>
+  <div class="success-message" id="successMessage">Form submitted successfully! Thank you for registering.</div>
 
   <script>
-    // Progress bar functionality
     const form = document.getElementById('registrationForm');
     const progressBar = document.getElementById('progressBar');
-    const inputs = form.querySelectorAll('input, select, textarea');
+    const inputs = form.querySelectorAll('input:not([type=submit]):not([type=reset]), select, textarea');
     const charCount = document.getElementById('charCount');
     const bio = document.getElementById('bio');
     const successMessage = document.getElementById('successMessage');
 
-    // Update progress bar
     function updateProgress() {
       const totalFields = inputs.length;
-      const filledFields = Array.from(inputs).filter(input => {
-        if (input.type === 'radio' || input.type === 'checkbox') {
-          return form.querySelector(`input[name="${input.name}"]:checked`);
-        }
-        return input.value.trim() !== '';
+      const filled = Array.from(inputs).filter(inp => {
+        if (inp.type === 'file') return inp.files.length > 0;
+        if (inp.type === 'checkbox') return form.querySelector(`input[name="${inp.name}"]:checked`);
+        if (inp.type === 'radio') return form.querySelector(`input[name="${inp.name}"]:checked`);
+        return inp.value.trim() !== '';
       }).length;
-      
-      const progress = (filledFields / totalFields) * 100;
-      progressBar.style.width = `${progress}%`;
+      const progress = Math.round((filled/totalFields) * 100);
+      progressBar.style.width = progress + '%';
     }
 
-    // Character counter for bio
-    bio.addEventListener('input', function() {
-      const remaining = 500 - this.value.length;
+    bio.addEventListener('input', function(){
       charCount.textContent = this.value.length;
-      if (remaining < 50) {
-        charCount.style.color = 'red';
-      } else {
-        charCount.style.color = '#666';
-      }
+      if (500 - this.value.length < 50) charCount.style.color = 'red';
+      else charCount.style.color = '#666';
+      updateProgress();
     });
 
-    // Add input event listeners
-    inputs.forEach(input => {
-      input.addEventListener('input', updateProgress);
-      input.addEventListener('change', updateProgress);
+    inputs.forEach(i => { i.addEventListener('input', updateProgress); i.addEventListener('change', updateProgress); });
+
+    // DO NOT prevent default — allow normal POST to InfinityFree (server will handle and redirect)
+    form.addEventListener('submit', function(e){
+      // leave it: browser will POST to submit.php and navigate
+      // if you want AJAX instead, tell me and I'll explain CORS and fetch.
     });
 
-    // Form submission
-    form.addEventListener('submit', function(e) {
-      e.preventDefault();
-      // Simulate form submission
-      form.style.display = 'none';
-      successMessage.style.display = 'block';
-    });
-
-    // Initial progress update
     updateProgress();
   </script>
 </body>
-
 </html>
